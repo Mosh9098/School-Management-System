@@ -34,8 +34,7 @@ Study Sphere App is a comprehensive educational platform designed for students, 
  .Flask-CORS
 
 #### Installation Instructions
- 1. Clone the repository: git clone https://github.com/omolojohn/Study-Sphere-App.git
-
+ 1. Clone the repository: (https://github.com/Mosh9098/School-Management-System)
  2. Navigate to the project directory: cd Study-Sphere-App/Server
 
  3. Install the required Python packages: pipenv install -r requirements.txt
@@ -84,9 +83,9 @@ Navigate through the app: Use the navigation bar to access different sections li
 ### Frontend
   React
   Vite
-  Axios (for API requests)
   React Router (for navigation)
   Redux (for state management)
+  Tailwind
 
 ## Challenges Faced
 
@@ -94,14 +93,10 @@ Navigate through the app: Use the navigation bar to access different sections li
  2. Role-Based Access Control: Implementing secure and scalable role-based authentication was challenging but crucial for the project’s success.
  3. Frontend Integration: Ensuring seamless communication between the frontend and backend, particularly for real-time updates, presented several technical challenges.
 
-## Future Improvements
 
- 1. Progressive Web App (PWA): Convert the application into a PWA for better offline support and mobile accessibility.
- 2. Advanced Analytics: Implement detailed analytics and reporting features for tracking student progress over time.
- 3. Automated Testing: Increase test coverage and automate testing for both backend and frontend components.
- 4. Multilingual Support: Add support for multiple languages to cater to a diverse user base.
 
 ## Live Link
+https://stud-app-lms.onrender.com/
 
 ## Technologies Used
 
@@ -136,14 +131,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Acknowledgments
- 1. Inspiration for this project came from the need to streamline and enhance educational experiences for students and educators alike.
 
- 2. Special thanks to the open-source community for providing the tools and libraries that made this project possible.
-
- 3. Moringa School
-
- 4. Dennis Kiboi (dennis-kiboi)
 
 
 
