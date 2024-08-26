@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-jwt-extended = "*"
+flask-cors = "*"
+python-dotenv = "*"
+sendgrid = "*"
+cloudinary = "*"
+sqlalchemy = "*"
+marshmallow = "*"
+flask-bcrypt = "*"
+flask-restful = "*"
+faker = "*"
+pillow = "*"
+itsdangerous = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

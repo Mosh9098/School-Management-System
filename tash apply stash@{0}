@@ -1,0 +1,102 @@
+[1mdiff --git a/Server/app.py b/Server/app.py[m
+[1mindex 3c4523c..593a968 100644[m
+[1m--- a/Server/app.py[m
+[1m+++ b/Server/app.py[m
+[36m@@ -52,7 +52,7 @@[m [mapi.add_resource(Index, '/')[m
+ [m
+ # CRUD operations for Users[m
+ class Users(Resource):[m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def get(self):[m
+         users = User.query.all()[m
+         users_list = [user.to_dict() for user in users][m
+[36m@@ -95,12 +95,12 @@[m [mclass VerifyEmail(Resource):[m
+         return make_response(jsonify({"msg": "Email verified successfully"}), 200)[m
+ [m
+ class UserResource(Resource):[m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def get(self, user_id):[m
+         user = User.query.get_or_404(user_id)[m
+         return make_response(jsonify(user.to_dict()), 200)[m
+ [m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def put(self, user_id):[m
+         user = User.query.get_or_404(user_id)[m
+         if request.json.get("email"):[m
+[36m@@ -112,7 +112,7 @@[m [mclass UserResource(Resource):[m
+         db.session.commit()[m
+         return make_response(jsonify(user.to_dict()), 200)[m
+ [m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def delete(self, user_id):[m
+         user = User.query.get_or_404(user_id)[m
+         db.session.delete(user)[m
+[36m@@ -138,13 +138,13 @@[m [mapi.add_resource(VerifyEmail, '/verify/<token>')[m
+ [m
+ # CRUD operations for Students[m
+ class Students(Resource):[m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def get(self):[m
+         students = Student.query.all()[m
+         students_list = [student.to_dict() for student in students][m
+         return make_response(jsonify({"count": len(students_list), "students": students_list}), 200)[m
+ [m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def post(self):[m
+         new_student = Student([m
+             user_id=request.json.get("user_id"),[m
+[36m@@ -159,12 +159,12 @@[m [mclass Students(Resource):[m
+         return make_response(jsonify(new_student.to_dict()), 201)[m
+ [m
+ class StudentResource(Resource):[m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def get(self, student_id):[m
+         student = Student.query.get_or_404(student_id)[m
+         return make_response(jsonify(student.to_dict()), 200)[m
+ [m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def put(self, student_id):[m
+         student = Student.query.get_or_404(student_id)[m
+         if request.json.get("name"):[m
+[36m@@ -180,7 +180,7 @@[m [mclass StudentResource(Resource):[m
+         db.session.commit()[m
+         return make_response(jsonify(student.to_dict()), 200)[m
+ [m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def delete(self, student_id):[m
+         student = Student.query.get_or_404(student_id)[m
+         db.session.delete(student)[m
+[36m@@ -192,13 +192,13 @@[m [mapi.add_resource(StudentResource, '/students/<int:student_id>')[m
+ [m
+ # CRUD operations for Teachers[m
+ class Teachers(Resource):[m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def get(self):[m
+         teachers = Teacher.query.all()[m
+         teachers_list = [teacher.to_dict() for teacher in teachers][m
+         return make_response(jsonify({"count": len(teachers_list), "teachers": teachers_list}), 200)[m
+ [m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def post(self):[m
+         new_teacher = Teacher([m
+             user_id=request.json.get("user_id"),[m
+[36m@@ -209,12 +209,12 @@[m [mclass Teachers(Resource):[m
+         return make_response(jsonify(new_teacher.to_dict()), 201)[m
+ [m
+ class TeacherResource(Resource):[m
+[31m-    @jwt_required()[m
+[32m+[m[32m #   @jwt_required()[m
+     def get(self, teacher_id):[m
+         teacher = Teacher.query.get_or_404(teacher_id)[m
+         return make_response(jsonify(teacher.to_dict()), 200)[m

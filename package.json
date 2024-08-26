@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-router-dom": "^6.26.0",
+    "tailwind": "^4.0.0"
+  }
+}
